@@ -17,5 +17,13 @@ Route::get('/', function () {
 // });
 
 Route::get('/hello', [PageController::class, 'hello']);
+
 Route::get('/posts', [PageController::class, 'posts']);
+Route::get('/posts/create', [PageController::class, 'create']);
+Route::post('/posts/store', [PageController::class, 'store']);
 Route::get('/posts/{id}', [PageController::class, 'show']);
+
+Route::get('/posts/{id}/edit', [PageController::class, 'edit']);
+Route::post('/posts/{id}/update', [PageController::class, 'update']);
+
+Route::post('/posts/{id}/delete', [PageController::class, 'destroy']);
